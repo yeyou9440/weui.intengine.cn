@@ -385,12 +385,7 @@
         //将时间放入dom中
         fillData: function() {
           var str = "";
-          if (sjObj.opt.Year) {
-            str += sjObj.opt.yyyy + '-';
-          }
-          if (sjObj.opt.Month) {
-            str += sjObj.opt.mm + '-'
-          }
+          
           if (sjObj.opt.Day) {
             str += sjObj.opt.dd + " "
           }
