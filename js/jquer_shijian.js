@@ -218,9 +218,9 @@
           if (sjObj.opt.ampmText) {
             main.append("<div class='df-wrap'><table><tbody><tr><td>" + sjObj.opt.buildAmPmStr() + "</tr></tbody></table></div>")
           }
-          if (sjObj.opt.Format == "dd-mm-yyyy") {
+          if (sjObj.opt.Format == "ddmmyyyy") {
             if (sjObj.opt.Day) $(sjObj.opt.timeElm.find('.df-wrap')[0]).find('tr').append("<td>" + sjObj.opt.buildArrStr(sjObj.opt.ddArr, sjObj.opt.dayText, "dd") + "</td>");
-            } else if (sjObj.opt.Format == "mm-dd-yyyy") {
+            } else if (sjObj.opt.Format == "mmddyyyy") {
             if (sjObj.opt.Day) $(sjObj.opt.timeElm.find('.df-wrap')[0]).find('tr').append("<td>" + sjObj.opt.buildArrStr(sjObj.opt.ddArr, sjObj.opt.dayText, "dd") + "</td>");
             } else {
             if (sjObj.opt.Day) $(sjObj.opt.timeElm.find('.df-wrap')[0]).find('tr').append("<td>" + sjObj.opt.buildArrStr(sjObj.opt.ddArr, sjObj.opt.dayText, "dd") + "</td>");
