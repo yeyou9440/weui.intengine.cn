@@ -72,7 +72,6 @@
           //按时间生成分钟，小时，月天数，月份
 
           var mydate = new Date();
-
           mydate.getFullYear(); //获取完整的年份(4位,1970-????)
           mydate.getMonth(); //获取当前月份(0-11,0代表1月)
           mydate.getDate(); //获取当前日(1-31)
@@ -80,10 +79,11 @@
           var month = date.getMonth() + 1;
           if (!options.mmArr) this.mmArr[0] = mydate.getMonth() + 1;
           for (var i = 0; i < 7; i++) {
-            if (i < 7 && !options.mArr)
+            if (i < 7 && !options.mArr) {
+              var strDate = mydate.getDate() + i;
+              this.ddArr[i] = mydate.getFullYear() + seperator1 + month + seperator1 + strDate;
+            }
 
-              var strDate =  mydate.getDate() + i;
-              this.ddArr[i] = mydate.getFullYear() + seperator1 + month + seperator1 + strDate ;
           }
 
           if (!options.ddArr) this.ddArr[0] = mydate.getDate();
