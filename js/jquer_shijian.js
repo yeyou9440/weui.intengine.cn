@@ -5,7 +5,7 @@
       //默认参数
       sjObj.defaults = {
         type: "time",
-        Format: "yyyy-mm-dd", //显示时间格式//yyyy表示年份 ，mm月份 ，dd天数
+        Format: "yyyymmdd", //显示时间格式//yyyy表示年份 ，mm月份 ，dd天数
         Order: 'yymmdd',
         width: 60, //
         height: 32,
@@ -218,9 +218,9 @@
           if (sjObj.opt.ampmText) {
             main.append("<div class='df-wrap'><table><tbody><tr><td>" + sjObj.opt.buildAmPmStr() + "</tr></tbody></table></div>")
           }
-          if (sjObj.opt.Format == "ddmmyyyy") {
+          if (sjObj.opt.Format == "dd-mm-yyyy") {
             if (sjObj.opt.Day) $(sjObj.opt.timeElm.find('.df-wrap')[0]).find('tr').append("<td>" + sjObj.opt.buildArrStr(sjObj.opt.ddArr, sjObj.opt.dayText, "dd") + "</td>");
-            } else if (sjObj.opt.Format == "mmddyyyy") {
+            } else if (sjObj.opt.Format == "mm-dd-yyyy") {
             if (sjObj.opt.Day) $(sjObj.opt.timeElm.find('.df-wrap')[0]).find('tr').append("<td>" + sjObj.opt.buildArrStr(sjObj.opt.ddArr, sjObj.opt.dayText, "dd") + "</td>");
             } else {
             if (sjObj.opt.Day) $(sjObj.opt.timeElm.find('.df-wrap')[0]).find('tr').append("<td>" + sjObj.opt.buildArrStr(sjObj.opt.ddArr, sjObj.opt.dayText, "dd") + "</td>");
