@@ -362,7 +362,12 @@
           })
           sjObj.opt.timeElm.find(".df-ok").on("click", function() {
             var str = "";
-            
+            if (sjObj.opt.Year) {
+              str = sjObj.opt.Format.replace("yyyy", sjObj.opt.yyyy)
+            }
+            if (sjObj.opt.Month) {
+              str = str.replace("mm", sjObj.opt.mm);
+            }
             if (sjObj.opt.Day) {
               str = str.replace("dd", sjObj.opt.dd) + " ";
             }
