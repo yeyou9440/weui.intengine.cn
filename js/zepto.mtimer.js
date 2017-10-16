@@ -124,15 +124,15 @@ a?"1":"0"),e)}}};p.utils=d;"undefined"!=typeof module&&module.exports?module.exp
 				}
 				timeStr += '<li></li><li></li>';
 				mpTime.find('ul').append(timeStr);  */
-				
-				
+
+
 				var timeStr = '';
 
-				timeStr += '<li class="selected" data-time="'+11+':00">'+11+':00</li><li data-time="'+11+':30">'+11+':30</li><li data-time="'+12+':00">'+12+':00</li><li data-time="'+17+':00">'+17+':00</li><li data-time="'+17+':30">'+17+':30</li><li data-time="'+18+':00">'+18+':00</li><li></li><li></li>';
+				timeStr += '<li class="selected" data-time="'+11+':00">'+11+':00</li><li data-time="'+11+':15">'+11+':15</li><li data-time="'+11+':30">'+11+':30</li><li data-time="'+11+':45">'+11+':45</li><li data-time="'+12+':00">'+12+':00</li><li data-time="'+17+':00">'+17+':00</li><li data-time="'+17+':15">'+17+':15</li><li data-time="'+17+':30">'+17+':30</li><li data-time="'+17+':45">'+17+':45</li><li data-time="'+18+':00">'+18+':00</li><li></li><li></li>';
 				mpTime.find('ul').append(timeStr);
-				
-				
-				
+
+
+
 
 				document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
 				//初始化scroll
