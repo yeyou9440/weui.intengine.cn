@@ -91,9 +91,7 @@
             if (i < 7 && !options.ddArr) {
               this.ddArr[i] = GetDateStr(i);
             }
-
           }
-
           if (!options.hArr) this.hArr[0] = '11:00';
           if (!options.hArr) this.hArr[1] = '11:10';
           if (!options.hArr) this.hArr[2] = '11:20';
