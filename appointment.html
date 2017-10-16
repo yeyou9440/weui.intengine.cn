@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
@@ -7,17 +7,19 @@
 
     <title>预约</title>
     <link href="css/style.css" rel="stylesheet" type="text/css" />
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="css/shijian.css" />
+    <link href="https://cdn.bootcss.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet">
+
+<script src="js/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/iScroll/5.2.0/iscroll.js"></script>
+    <script src="js/payment.js" type="text/javascript" charset="utf-8"></script>
+   
+    <script>jQuery.noConflict()</script>
+    <script src="js/zepto.js"></script>
+	<script src="js/zepto.mtimer.js"></script>
+
     <link rel="stylesheet" type="text/css" href="css/reset.css" />
     <link rel="stylesheet" type="text/css" href="css/payment.css" />
-    <link rel="stylesheet" href="css/weui.min.css">
-    <script src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
-    <script type="text/javascript" src="js/iscroll.js"></script>
-    <script type="text/javascript" src="js/jquer_shijian.js"></script>
-    <script type="text/javascript" src="js/jquery-labelauty.js"></script>
-    <script src="js/payment.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" href="css/zepto.mtimer.css">
 
 </head>
 
@@ -39,9 +41,9 @@
                     <div class="payment_time_title bg-2">
                         <div class="al_left">餐厅选择</div>
                         <div class=" al_right">
-                            <!--    <em ><input type="hidden" value ="" required="required" />请选择></em>
+                            <!--    <em ><input type="hidden" value ="" required="required" />请选择></em><script src="js/jquery.min.js"></script>
                 <em ><input type="text"  id="input2" value=""  placeholder="选择餐厅>" required></em> -->
-                            <em>选择餐厅</em>
+                            <em>please choose</em>
 
 
                         </div>
@@ -77,6 +79,8 @@
                                 </div>
                             </li>
 
+
+
                         </ul>
                         <div class="mask_c"><button type="submit" class="btn2" id="p2">返回</button></div>
                     </div>
@@ -84,35 +88,25 @@
 
                 </div>
             </div>
-
+            
+<script>
+$(function(){
+	$('#input1').mtimer();	
+});
+</script>
 
             <div class="a_line ">
                 <div class="al_left">时间选择</div>
                 <div class="al_right ">
                     <div id="picktime">
-                        <input type="text" id="input1" placeholder="请选择时间>" value="" required>
+                    <input type="text" id="input1" placeholder="请选择时间>"  value="" readonly>
                     </div>
 
                 </div>
                 <div class="clearfix"></div>
             </div>
 
-            <script src="jquer_shijian.js" type="text/javascript" charset="utf-8"></script>
-            <script type="text/javascript">
-                $("#input1").shijian({
-                    y: 10//当前年份+10
-                })
-                $("#input2").shijian({
-                    showNowTime: false,
-                    Year: false,//是否显示年//
-                    Month: false,//是否显示月//
-                    Day: false,//是否显示日//
-                    h: "00",
-                    m: "01",
-                    alwaysShow: true,
-                    timeElm: $(".time-box"),//sjObj表示当前对象
-                })
-            </script>
+
             <div id="datePlugin"></div>
 
             <div class="a_line ">
@@ -128,40 +122,44 @@
             </div>
 
 
+
             <div class="a_line ">
                 <div class="al_left">用餐人数</div>
                 <div class="clearfix"></div>
-                <div id="p">
 
-                    <ul class="dowebok">
-                        <li><input type="radio" name="type" data-labelauty="1-5人" value="1"></li>
-                        <li><input type="radio" name="type" data-labelauty="2-6人" value="2"></li>
-                        <li><input type="radio" name="type" data-labelauty="4-8人" value="3"></li>
-                        <li><input type="radio" name="type" data-labelauty="6-10人" value="4"></li>
-                        <li><input type="radio" name="type" data-labelauty="8-12人" value="5"></li>
-                        <li><input type="radio" name="type" data-labelauty="12人以上" value="6"></li>
+                    
+<div class="frame">
+        <input checked="checked" id="radio_1" name="radio" type="radio">
+        <label class="radio" for="radio_1">1-5人
+        </label>
+        <input id="radio_2" name="radio" type="radio">
+        <label class="radio" for="radio_2">
+            2-6人
+        </label>
+        <input id="radio_3" name="radio" type="radio">
+        <label class="radio" for="radio_3">
+            4-8人
+        </label>
+        <input id="radio_4" name="radio" type="radio">
+        <label class="radio" for="radio_4">
+           6-10人
+        </label>
+        <input id="radio_5" name="radio" type="radio">
+        <label class="radio" for="radio_5">
+            8-12人
+        </label>
+                <input id="radio_6" name="radio" type="radio">
+        <label class="radio" for="radio_6">
+            12人以上
+        </label>
+    </div>
+        
 
-                    </ul>
-                    <script>
-                        $(function () {
-                            $(':input').labelauty();
-                        });
-
-                    </script>
-                    </center>
-
-
-
+ 
                     <div class="clearfix"></div>
                 </div>
             </div>
-            <script type="text/javascript">
-                        $(function () {
-                            $('#beginTime').date();
-                            $('#endTime').date({ theme: "datetime" });
-                        });
 
-            </script>
 
             <div class=" bottom_menu">
                  <div class=" bm_left"  id="subBtn">

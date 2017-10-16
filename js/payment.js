@@ -4,7 +4,7 @@
 $(function () {
     $(".payment_time_title em").click(function () {
         $("#bg").css({
-            display: "block", height: $(document).height()
+            display: "block", height: "100%"
         });
         var $box = $('.payment_time_mask');
         $box.css({
