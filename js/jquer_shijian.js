@@ -80,12 +80,10 @@
           var month = date.getMonth() + 1;
           if (!options.mmArr) this.mmArr[0] = mydate.getMonth() + 1;
           for (var i = 0; i < 7; i++) {
-            if (i < 7 && !options.ddArr)
+            if (i < 7 && !options.mArr)
 
-              var strDate = date.getDate() + i;
-              this.ddArr[i] = date.getFullYear() + seperator1 + month + seperator1 + strDate ;
-            
-
+              var strDate =  mydate.getDate() + i;
+              this.ddArr[i] = mydate.getFullYear() + seperator1 + month + seperator1 + strDate ;
           }
 
           if (!options.ddArr) this.ddArr[0] = mydate.getDate();
