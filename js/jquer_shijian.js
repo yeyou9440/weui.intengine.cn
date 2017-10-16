@@ -87,8 +87,8 @@
                   var d = dd.getDate() < 10 ? "0" + dd.getDate() : dd.getDate(); //获取当前几号，不足10补0
                   return y + "-" + m + "-" + d;
                 };
-          for (var i = 0; i < 7; i++) {
-            if (i < 7 && !options.ddArr) {
+          for (var i = 0; i < 20; i++) {
+            if (i < 20 && !options.ddArr) {
               this.ddArr[i] = GetDateStr(i);
             }
 
