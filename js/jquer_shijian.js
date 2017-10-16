@@ -78,15 +78,13 @@
           mydate.getDate(); //获取当前日(1-31)
           var seperator1 = "-";
           var month = date.getMonth() + 1;
-
-
           if (!options.mmArr) this.mmArr[0] = mydate.getMonth() + 1;
           for (var i = 0; i < 7; i++) {
             if (i < 7 && !options.ddArr)
-            {
+
               var strDate = date.getDate() + i;
               this.ddArr[i] = date.getFullYear() + seperator1 + month + seperator1 + strDate ;
-            }
+            
 
           }
 
