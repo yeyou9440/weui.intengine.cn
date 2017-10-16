@@ -13,7 +13,7 @@
 		            Month:true,//是否显示月//
 		            Day:true,//是否显示日//
 		            Hour:true,//是否显示小时
-		            Minute:true,//是否显示分钟
+		            Minute:false,//是否显示分钟
 		            Seconds:false,//是否显示秒
 		            yyArr:[],//年份数组
 		            mmArr:[],//月份数组
@@ -75,16 +75,24 @@
                           if(i<7&&!options.mArr)this.ddArr[i]=mydate.getDate()+i;
                         }
                         if(!options.ddArr)this.ddArr[0]=mydate.getDate();
-		                    if(!options.hArr)this.hArr[0]=10;
-                        if(!options.hArr)this.hArr[1]=11;
-                        if(!options.hArr)this.hArr[2]=12;
-                        if(!options.hArr)this.hArr[3]=16;
-                        if(!options.hArr)this.hArr[4]=17;
-                        if(!options.hArr)this.hArr[5]=18;
+                        if(!options.hArr)this.hArr[0]='11:00';
+						 if(!options.hArr)this.hArr[1]='11:10';
+                        if(!options.hArr)this.hArr[2]='11:20';
+                        if(!options.hArr)this.hArr[3]='11:30';
+						if(!options.hArr)this.hArr[4]='11:40';
+						 if(!options.hArr)this.hArr[5]='11:50';
+                        if(!options.hArr)this.hArr[6]='12:00';
+                        if(!options.hArr)this.hArr[7]='17:00';
+						 if(!options.hArr)this.hArr[8]='17:10';
+                        if(!options.hArr)this.hArr[9]='17:20';
+                        if(!options.hArr)this.hArr[10]='17:30';
+						if(!options.hArr)this.hArr[11]='17:40';
+						 if(!options.hArr)this.hArr[12]='17:50';
+                        if(!options.hArr)this.hArr[13]='18:00';
 
-                    for(var i=0;i<6;i++){
+                   /* for(var i=0;i<6;i++){
 		                    if(i<6&&!options.mArr)this.mArr[i]=i*10;
-		                }
+		                }*/
 		            },
 		            y:1,
 		            nowTime:new Date(),
@@ -265,7 +273,7 @@
 		                            $(this).parent().css({"transform":"translate(0,"+pY+"px)"})
 		                        }
 		                    })
-		                    if(sjObj.opt.Minute)sjObj.opt.timeElm.find("[data-class='m'] .df-li").each(function(){
+		                 /*   if(sjObj.opt.Minute)sjObj.opt.timeElm.find("[data-class='m'] .df-li").each(function(){
 		                        if(parseInt($(this).attr("data-val"))==parseInt(Minutes)){
 		                            var pY=-($(this).index()-2)*sjObj.opt.height;
 		                            console.log(pY,Minutes,$(this).index(),this)
@@ -278,7 +286,7 @@
 		                            //console.log(pY)
 		                            $(this).parent().css({"transform":"translate(0,"+pY+"px)"})
 		                        }
-		                    })
+		                    })*/
 		                }else{
 		                	console.log("使用自定义时间")
 		                	if(sjObj.opt.Year)sjObj.opt.timeElm.find("[data-class='yyyy'] .df-li").each(function(){
@@ -308,7 +316,7 @@
 		                            $(this).parent().css({"transform":"translate(0,"+pY+"px)"})
 		                        }
 		                    })
-		                    if(sjObj.opt.Minute)sjObj.opt.timeElm.find("[data-class='m'] .df-li").each(function(){
+		                   /* if(sjObj.opt.Minute)sjObj.opt.timeElm.find("[data-class='m'] .df-li").each(function(){
 		                        if(parseInt($(this).attr("data-val"))==parseInt(sjObj.opt.m)){
 		                            var pY=-($(this).index()-2)*sjObj.opt.height;
 		                            console.log(pY,sjObj.opt.m,$(this).index())
@@ -321,7 +329,7 @@
 		                            //console.log(pY)
 		                            $(this).parent().css({"transform":"translate(0,"+pY+"px)"})
 		                        }
-		                    })
+		                    })*/
 		                    console.log("设置默认时间")
 		                }
 		                sjObj.opt.fillData();
@@ -346,7 +354,7 @@
 		                    if(sjObj.opt.Day) {
 		                        str = str.replace("dd", sjObj.opt.dd)+" ";
 		                    }
-		                    str+=sjObj.opt.h+":"+sjObj.opt.m;
+		                    str+=sjObj.opt.h;
 		                    sjObj.opt.val=str;
 		                    console.log("我执行了没")
 		                    $(sjObj.opt.thisElm).val(sjObj.opt.val);
@@ -369,8 +377,8 @@
 		                if(sjObj.opt.Day){
 		                    str+=sjObj.opt.dd+" "
 		                }
-		                str+=sjObj.opt.h+":";
-		                str+=sjObj.opt.m;
+		                str+=sjObj.opt.h;
+		            
 		                if(!sjObj.opt.alwaysShow){
 		                	console.log("直接显示？",sjObj.opt.timeElm.find(".df-final"))
 		                    sjObj.opt.timeElm.find(".df-final").html(str);
