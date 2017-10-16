@@ -76,7 +76,7 @@
           mydate.getMonth(); //获取当前月份(0-11,0代表1月)
           mydate.getDate(); //获取当前日(1-31)
           var seperator1 = "-";
-          var month = date.getMonth() + 1;
+          var month = mydate.getMonth() + 1;
           if (!options.mmArr) this.mmArr[0] = mydate.getMonth() + 1;
           for (var i = 0; i < 7; i++) {
             if (i < 7 && !options.mArr) {
