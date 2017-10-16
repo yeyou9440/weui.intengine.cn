@@ -261,25 +261,7 @@
             var Minutes = data.getMinutes();
             console.log(year, month, day, hours, Minutes);
             console.log("是否显示年", sjObj.opt.Year)
-            if (sjObj.opt.Year) sjObj.opt.timeElm.find("[data-class='yyyy'] .df-li").each(function() {
-              console.log(parseInt($(this).attr("data-val")), parseInt(year))
-              if (parseInt($(this).attr("data-val")) == parseInt(year)) {
-                var pY = -($(this).index() - 2) * sjObj.opt.height;
-                console.log(pY, year)
-                $(this).parent().css({
-                  "transform": "translate(0," + pY + "px)"
-                })
-              }
-            })
-            if (sjObj.opt.Month) sjObj.opt.timeElm.find("[data-class='mm'] .df-li").each(function() {
-              if (parseInt($(this).attr("data-val")) == parseInt(month)) {
-                var pY = -($(this).index() - 2) * sjObj.opt.height;
-                console.log(pY, month)
-                $(this).parent().css({
-                  "transform": "translate(0," + pY + "px)"
-                })
-              }
-            })
+            
             if (sjObj.opt.Day) sjObj.opt.timeElm.find("[data-class='dd'] .df-li").each(function() {
               if (parseInt($(this).attr("data-val")) == parseInt(day)) {
                 var pY = -($(this).index() - 2) * sjObj.opt.height;
@@ -385,7 +367,7 @@
         //将时间放入dom中
         fillData: function() {
           var str = "";
-          
+
           if (sjObj.opt.Day) {
             str += sjObj.opt.dd + " "
           }
