@@ -68,6 +68,14 @@
         df_final: function() {
           return $("<div class='df-final'></div>")
         },
+        GetDateStr: function(AddDayCount) {
+          var dd = new Date();
+          dd.setDate(dd.getDate() + AddDayCount); //获取AddDayCount天后的日期
+          var y = dd.getFullYear();
+          var m = (dd.getMonth() + 1) < 10 ? "0" + (dd.getMonth() + 1) : (dd.getMonth() + 1); //获取当前月份的日期，不足10补0
+          var d = dd.getDate() < 10 ? "0" + dd.getDate() : dd.getDate(); //获取当前几号，不足10补0
+          return y + "-" + m + "-" + d;
+        }
         getArr: function() {
           //按时间生成分钟，小时，月天数，月份
 
@@ -80,8 +88,7 @@
           if (!options.mmArr) this.mmArr[0] = mydate.getMonth() + 1;
           for (var i = 0; i < 7; i++) {
             if (i < 7 && !options.ddArr) {
-              var strDate = mydate.getDate() + i;
-              this.ddArr[i] = mydate.getFullYear() + seperator1 + month + seperator1 + strDate;
+              this.ddArr[i] = GetDateStr(i);
             }
 
           }
