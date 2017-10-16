@@ -30,7 +30,7 @@
         val: null, //最终显示时间
         yearText: "年", //顶部时间 年单位 文字
         monthText: "月", //顶部时间 月单位 文字
-        dayText: '日', //顶部时间 日单位 文字
+        dayText: '日期', //顶部时间 日单位 文字
         hourText: '时', //顶部时间 时单位 文字
         minuteText: '分', //顶部时间 分单位 文字
         secondsText: '秒', //顶部时间 秒单位 文字
@@ -227,8 +227,6 @@
             if (sjObj.opt.Day) $(sjObj.opt.timeElm.find('.df-wrap')[0]).find('tr').append("<td>" + sjObj.opt.buildArrStr(sjObj.opt.ddArr, sjObj.opt.dayText, "dd") + "</td>");
             if (sjObj.opt.Year) $(sjObj.opt.timeElm.find('.df-wrap')[0]).find('tr').append("<td>" + sjObj.opt.buildArrStr(sjObj.opt.yyArr, sjObj.opt.yearText, "yyyy") + "</td>");
           } else {
-            if (sjObj.opt.Year) $(sjObj.opt.timeElm.find('.df-wrap')[0]).find('tr').append("<td>" + sjObj.opt.buildArrStr(sjObj.opt.yyArr, sjObj.opt.yearText, "yyyy") + "</td>");
-            if (sjObj.opt.Month) $(sjObj.opt.timeElm.find('.df-wrap')[0]).find('tr').append("<td>" + sjObj.opt.buildArrStr(sjObj.opt.mmArr, sjObj.opt.monthText, "mm") + "</td>");
             if (sjObj.opt.Day) $(sjObj.opt.timeElm.find('.df-wrap')[0]).find('tr').append("<td>" + sjObj.opt.buildArrStr(sjObj.opt.ddArr, sjObj.opt.dayText, "dd") + "</td>");
           }
           if (sjObj.opt.Hour) {
@@ -316,23 +314,7 @@
                })*/
           } else {
             console.log("使用自定义时间")
-            if (sjObj.opt.Year) sjObj.opt.timeElm.find("[data-class='yyyy'] .df-li").each(function() {
-              if (parseInt($(this).attr("data-val")) == parseInt(sjObj.opt.yyyy)) {
-                var pY = -($(this).index() - 2) * sjObj.opt.height;
-                $(this).parent().css({
-                  "transform": "translate(0," + pY + "px)"
-                })
-              }
-            })
-            if (sjObj.opt.Month) sjObj.opt.timeElm.find("[data-class='mm'] .df-li").each(function() {
-              if (parseInt($(this).attr("data-val")) == parseInt(sjObj.opt.mm)) {
-                var pY = -($(this).index() - 2) * sjObj.opt.height;
-                //console.log(pY)
-                $(this).parent().css({
-                  "transform": "translate(0," + pY + "px)"
-                })
-              }
-            })
+
             if (sjObj.opt.Day) sjObj.opt.timeElm.find("[data-class='dd'] .df-li").each(function() {
               if (parseInt($(this).attr("data-val")) == parseInt(sjObj.opt.dd)) {
                 var pY = -($(this).index() - 2) * sjObj.opt.height;
@@ -380,12 +362,7 @@
           })
           sjObj.opt.timeElm.find(".df-ok").on("click", function() {
             var str = "";
-            if (sjObj.opt.Year) {
-              str = sjObj.opt.Format.replace("yyyy", sjObj.opt.yyyy)
-            }
-            if (sjObj.opt.Month) {
-              str = str.replace("mm", sjObj.opt.mm);
-            }
+            
             if (sjObj.opt.Day) {
               str = str.replace("dd", sjObj.opt.dd) + " ";
             }
