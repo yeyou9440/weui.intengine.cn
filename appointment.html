@@ -1,0 +1,191 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <title>预约</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="css/shijian.css" />
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/payment.css" />
+    <link rel="stylesheet" href="css/weui.min.css">
+    <script src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="js/iscroll.js"></script>
+    <script type="text/javascript" src="js/jquer_shijian.js"></script>
+    <script type="text/javascript" src="js/jquery-labelauty.js"></script>
+    <script src="js/payment.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>
+    <form id="validateForm" action="order.html">
+        <div class="top_bar">
+            <div class="top_bar_left"> <a href="index.html"><img src="images/icon4.png" width="15" height="24" /></a>
+            </div>
+            <div class="top_bar_right">预 约</div>
+        </div>
+        <div class="appointment">
+            <div class=" a_logo">
+                <img src="images/logo4.png" width="122" height="121" /> </div>
+
+
+            <div class="a_line " id="wrap">
+
+                <div class="payment_time">
+                    <div class="payment_time_title bg-2">
+                        <div class="al_left">餐厅选择</div>
+                        <div class=" al_right">
+                            <!--    <em ><input type="hidden" value ="" required="required" />请选择></em>
+                <em ><input type="text"  id="input2" value=""  placeholder="选择餐厅>" required></em> -->
+                            <em>选择餐厅</em>
+
+
+                        </div>
+                    </div>
+                    <div id="bg">
+
+                    </div>
+                    <div class="payment_time_mask">
+                        <div class="pick_title">选择餐厅</div>
+                        <ul class="restaurant">
+                            <li>
+                                <div class="pick_line">
+                                    <div class="pick_line_img"><img src="images/D_photo.jpg" width="62" height="60" /></div>
+                                    <p class="pick_line_title">餐厅名称1</p>
+                                    <div class="pick_line_distance">2.3km</div>
+                                    <div class="pick_line_text">深圳市南山区科技园南区R2-B</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="pick_line">
+                                    <div class="pick_line_img"><img src="images/D_photo.jpg" width="62" height="60" /></div>
+                                    <p class="pick_line_title">餐厅名称2</p>
+                                    <div class="pick_line_distance">5.6km</div>
+                                    <div class="pick_line_text">深圳市南山区科技园南区R2-B</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="pick_line">
+                                    <div class="pick_line_img"><img src="images/D_photo.jpg" width="62" height="60" /></div>
+                                    <p class="pick_line_title">餐厅名称3</p>
+                                    <div class="pick_line_distance">13.3km</div>
+                                    <div class="pick_line_text">深圳市南山区科技园南区R2-B</div>
+                                </div>
+                            </li>
+
+                        </ul>
+                        <div class="mask_c"><button type="submit" class="btn2" id="p2">返回</button></div>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+            <div class="a_line ">
+                <div class="al_left">时间选择</div>
+                <div class="al_right ">
+                    <div id="picktime">
+                        <input type="text" id="input1" placeholder="请选择时间>" value="" required>
+                    </div>
+
+                </div>
+                <div class="clearfix"></div>
+            </div>
+
+            <script src="jquer_shijian.js" type="text/javascript" charset="utf-8"></script>
+            <script type="text/javascript">
+                $("#input1").shijian({
+                    y: 10//当前年份+10
+                })
+                $("#input2").shijian({
+                    showNowTime: false,
+                    Year: false,//是否显示年//
+                    Month: false,//是否显示月//
+                    Day: false,//是否显示日//
+                    h: "00",
+                    m: "01",
+                    alwaysShow: true,
+                    timeElm: $(".time-box"),//sjObj表示当前对象
+                })
+            </script>
+            <div id="datePlugin"></div>
+
+            <div class="a_line ">
+                <div class="al_left">联系方式</div>
+                <div class="al_right ">
+                    <div id="tel_in">
+                        <input type="tel" id="input_tel" name="tel" onfocus="this.placeholder=''" onblur="this.placeholder='请填写联系方式>'" placeholder="请填写联系方式>"
+                            required>
+                    </div>
+
+                </div>
+                <div class="clearfix"></div>
+            </div>
+
+
+            <div class="a_line ">
+                <div class="al_left">用餐人数</div>
+                <div class="clearfix"></div>
+                <div id="p">
+
+                    <ul class="dowebok">
+                        <li><input type="radio" name="type" data-labelauty="1-5人" value="1"></li>
+                        <li><input type="radio" name="type" data-labelauty="2-6人" value="2"></li>
+                        <li><input type="radio" name="type" data-labelauty="4-8人" value="3"></li>
+                        <li><input type="radio" name="type" data-labelauty="6-10人" value="4"></li>
+                        <li><input type="radio" name="type" data-labelauty="8-12人" value="5"></li>
+                        <li><input type="radio" name="type" data-labelauty="12人以上" value="6"></li>
+
+                    </ul>
+                    <script>
+                        $(function () {
+                            $(':input').labelauty();
+                        });
+
+                    </script>
+                    </center>
+
+
+
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <script type="text/javascript">
+                        $(function () {
+                            $('#beginTime').date();
+                            $('#endTime').date({ theme: "datetime" });
+                        });
+
+            </script>
+
+            <div class=" bottom_menu">
+                 <div class=" bm_left"  id="subBtn">
+                    开始点餐
+                 </div>
+                    <!-- document.location='order.html'; -->
+                <!-- <div class=" bm_left">
+                    <input type="submit" id="validateSubmit">
+                    <label for="validateSubmit">开始点餐</label> </div> -->
+                <div class=" bm_right" onclick="document.location='#.html';">
+                    XXXX </div>
+            </div>
+            <div class="clearfix"></div>
+            </from>
+
+            <div class="js_dialog" id="iosDialog" style="display: none;">
+                <div class="weui-mask"></div>
+                <div class="weui-dialog">
+                    <div class="weui-dialog__bd" id="dialogContent"></div>
+                    <div class="weui-dialog__ft">
+                        <a href="javascript:;" class="weui-dialog__btn weui-dialog__btn_primary">知道了</a>
+                    </div>
+                </div>
+            </div>
+</body>
+
+</html>

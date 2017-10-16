@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>已点</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="https://cdn.bootcss.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<style type="text/css">
+body {
+	background-color: #e7e7e7;
+}
+</style>
+</head>
+
+<body>
+<div class="top_bar">
+<div class="top_bar_left">
+  <a href="order.html"><img src="images/icon4.png" width="15" height="24" /></a>
+</div>
+<div class="top_bar_right">已 点</div>
+</div>
+<div class="appointment2">
+<div class=" order_title2"><img src="images/icon5.png" width="20" height="19" /> 我的菜品 <span>共计：28项</span></div>
+
+<div class="a_line2">
+  <div>
+  <ul class="eat-list">
+	    	<li><img src="images/dishes.jpg"  />
+	    		<span class="name">番茄浓汤番茄浓汤
+               </span>
+	    		 <em class="price">￥1.0</em>
+	    		<div class="d-stock ">
+	                 <a class="decrease"><img src="images/decrease.png" width="20" height="20" /></a>
+					                 <input id="num" readonly class="text_box" name="" type="text" value="1">
+					                <a class="increase"><img src="images/increase.png" width="20" height="20" /></a>
+			    </div>
+	    	</li>
+	    	<li><img src="images/dishes.jpg"  />
+	    		<span class="name">番茄浓汤番茄浓汤
+               </span>
+	    		 <em class="price">￥2.0</em>
+	    		<div class="d-stock ">
+	               <a class="decrease"><img src="images/decrease.png" width="20" height="20" /></a>
+					                 <input id="num" readonly class="text_box" name="" type="text" value="1">
+					                <a class="increase"><img src="images/increase.png" width="20" height="20" /></a>
+			    </div>
+	    	</li>
+            <li><img src="images/dishes.jpg"  />
+	    		<span class="name">番茄浓汤番茄浓汤
+               </span>
+	    		 <em class="price">￥3.0</em>
+	    		<div class="d-stock ">
+	               <a class="decrease"><img src="images/decrease.png" width="20" height="20" /></a>
+					                 <input id="num" readonly class="text_box" name="" type="text" value="1">
+					                <a class="increase"><img src="images/increase.png" width="20" height="20" /></a>
+			    </div>
+	    	</li>
+         
+          
+            <li><img src="images/dishes.jpg"  />
+	    		<span class="name">番茄浓汤番茄浓汤
+               </span>
+	    		 <em class="price">￥4.0</em>
+	    		<div class="d-stock ">
+	               <a class="decrease"><img src="images/decrease.png" width="20" height="20" /></a>
+					                 <input id="num" readonly class="text_box" name="" type="text" value="1">
+					                <a class="increase"><img src="images/increase.png" width="20" height="20" /></a>
+			    </div>
+	    	</li>
+            <li><img src="images/dishes.jpg"  />
+	    		<span class="name">番茄浓汤番茄浓汤
+               </span>
+	    		 <em class="price">￥5.0</em>
+	    		<div class="d-stock ">
+	               <a class="decrease"><img src="images/decrease.png" width="20" height="20" /></a>
+					                 <input id="num" readonly class="text_box" name="" type="text" value="1">
+					                <a class="increase"><img src="images/increase.png" width="20" height="20" /></a>
+			    </div>
+	    	</li>
+            
+</ul>
+
+
+</div>
+
+
+</div>
+
+
+<div class=" totle" >
+<div class="totle_prize"><span class="totle_text">总计</span>￥228</div>
+<div class="clearfix"></div>
+</div>
+
+
+</div>
+</div>
+
+
+
+<div class="clearfix"></div>
+<div class=" bottom_menu">
+<div class=" bm_left"  onclick="document.location='order.html';">
+ 加 菜</div>
+<div class=" bm_right"  onclick="document.location='pay.html';">
+  结 算</div>
+</div>
+<div class="clearfix"></div>
+<script>
+		//购物数量加减
+		$(function(){
+				$('.increase').click(function(){
+					var self = $(this);
+					var current_num = parseInt(self.siblings('input').val());
+					current_num += 1;
+					if(current_num > 0){
+						self.siblings(".decrease").fadeIn();
+						self.siblings(".text_box").fadeIn();
+					}
+					self.siblings('input').val(current_num);
+					update_item(self.siblings('input').data('item-id'));
+				})		
+				$('.decrease').click(function(){
+					var self = $(this);
+					var current_num = parseInt(self.siblings('input').val());
+					if(current_num > 0){
+						current_num -= 1;
+		                if(current_num < 1){
+			                self.fadeOut();
+							self.siblings(".text_box").fadeOut();
+							self.parent().parent('li').css('display', 'none');
+		                }
+						self.siblings('input').val(current_num);
+						update_item(self.siblings('input').data('item-id'));
+					}
+				})
+			})
+		//删除提示信息   
+		    $(function() {
+		  $('#doc-modal-list').find('.am-icon-close').add('#doc-confirm-toggle').
+		    on('click', function() {
+		      $('#my-confirm').modal({
+		        relatedTarget: this,
+		        onConfirm: function(options) {
+		          var $link = $(this.relatedTarget).prev('a');
+		          var msg = $link.length ? '你要删除的饮品 为 ' + $link.data('id') :
+		            '确定了';
+		//        alert(msg);
+		        },
+		        onCancel: function() {
+		          alert('不删除');
+		        }
+		      });
+		    });
+		});
+		
+		</script>
+</body>
+</html>

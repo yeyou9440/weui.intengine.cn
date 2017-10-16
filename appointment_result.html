@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>预约结果</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery.min.js"></script>
+		<script src="js/xcConfirm.js" type="text/javascript" charset="utf-8"></script>
+        <script type="text/javascript">
+			$(function(){
+				
+				$("#btn7").click(function(){
+					var txt=  "您确定要取消此次预约吗？";
+					var option = {
+						title: "预 约",
+						btn: parseInt("0011",2),
+						onOk: function(){
+							console.log("确认啦");
+						}
+					}
+					window.wxc.xcConfirm(txt, "custom", option);
+				});
+				
+		
+			});
+		</script>
+</head>
+
+<body>
+<div class="top_bar">
+<div class="top_bar_left">
+ <a href="appointment.html"><img src="images/icon4.png" width="15" height="24" /></a>
+</div>
+<div class="top_bar_right">预约结果</div>
+</div>
+<div class="appointment">
+<div class=" order_title">您的预约
+<div class="Btnsg" id="btn7">取消预约</div>
+</div>
+<div class="a_line">
+<div class="al_left ">
+  <p>餐厅选择:</p>
+</div>
+<div class="pick_line">
+<div class="pick_line_title2 ">餐厅名称</div>
+<div class="pick_line_text2 ">深圳市南山区科技园南区R2-B</div>
+
+</div>
+<div class="clearfix"></div>
+</div>
+
+
+<div class="a_line">
+<div class="al_left">时间选择:</div>
+<div class="pick_line_title3">2017/08/10  7:00</div>
+<div class="clearfix"></div></div>
+
+<div class="a_line">
+<div class="al_left">总计金额:</div>
+<div class="pick_line_title5">¥ 228 <span class="unpay">未支付</span> <span class="paid">已支付</span></div>
+<div class="clearfix"></div></div>
+
+<div class="a_line">
+<div class="al_left">用餐人数:</div>
+<div class="pick_line_title4">5-8人</div>
+<div class="clearfix"></div></div>
+</div>
+
+<div class="a_line">
+<div class="al_left" style="">预定菜品:</div>
+
+<div class="pick_line_text">
+<ul class="dishes">
+<li>奶油蘑菇汤 x1</li>
+<li>番茄浓汤 x1</li>
+<li>炸培根鸡肉卷  x1</li>
+<li>烤柠檬鸡腿配炸薯条 x1</li> 
+<li>红烩牛肉  x1</li>
+<li>西冷牛排配红酒少司 x1</li>
+<li>T骨牛扒 x1</li>
+<li>蜜制烤鸡翅  x1</li>
+<li>青椒汁牛柳  x1</li>
+</ul>
+
+</div>
+
+
+<div class="clearfix"></div></div>
+</div>
+
+<div class=" bottom_menu">
+<div class=" bm_left" onclick="document.location='order.html';">
+ 加 菜 </div>
+<div class=" bm_right" onclick="document.location='pay.html';">
+  支 付（返回） </div>
+</div>
+<div class="clearfix"></div>
+</body>
+</html>
