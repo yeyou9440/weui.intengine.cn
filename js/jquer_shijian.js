@@ -413,12 +413,12 @@
             sjObj.opt.timeElm.find(".df-ul").each(function() {
               currentY = getTranslateY(this);
               var dataClass = $(this).attr("data-class");
-              var val = $($(this).find(".df-li")[Math.round(currentY / sjObj.opt.height) + 1]).attr("data-val");
+              var val = $($(this).find(".df-li")[Math.round(currentY / sjObj.opt.height) + 2]).attr("data-val");
               sjObj.opt.vardata(dataClass, val);
               console.log(dataClass, val)
               $(this).unbind("webkitTransitionEnd").on("webkitTransitionEnd", function() {
                 currentY = getTranslateY(this);
-                var val = $($(this).find(".df-li")[Math.round(currentY / sjObj.opt.height) + 1]).attr("data-val");
+                var val = $($(this).find(".df-li")[Math.round(currentY / sjObj.opt.height) + 2]).attr("data-val");
                 dataClass = $(this).attr("data-class");
                 sjObj.opt.vardata(dataClass, val);
                 sjObj.opt.daysJudge(dataClass);
@@ -428,12 +428,12 @@
             sjObj.opt.timeElm.find(".df-ul").each(function() {
               currentY = getTranslateY(this);
               var dataClass = $(this).attr("data-class");
-              var val = $($(this).find(".df-li")[Math.round(currentY / sjObj.opt.height) + 5]).attr("data-val");
+              var val = $($(this).find(".df-li")[Math.round(currentY / sjObj.opt.height) + 2]).attr("data-val");
               sjObj.opt.vardata(dataClass, val);
               console.log(dataClass, val)
               $(this).unbind("webkitTransitionEnd").on("webkitTransitionEnd", function() {
                 currentY = getTranslateY(this);
-                var val = $($(this).find(".df-li")[Math.round(currentY / sjObj.opt.height) + 5]).attr("data-val");
+                var val = $($(this).find(".df-li")[Math.round(currentY / sjObj.opt.height) + 2]).attr("data-val");
                 dataClass = $(this).attr("data-class");
                 sjObj.opt.vardata(dataClass, val);
                 sjObj.opt.daysJudge(dataClass);
