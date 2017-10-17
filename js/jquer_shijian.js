@@ -311,7 +311,7 @@
 
             if (sjObj.opt.Day) sjObj.opt.timeElm.find("[data-class='dd'] .df-li").each(function() {
               if (parseInt($(this).attr("data-val")) == parseInt(sjObj.opt.dd)) {
-                var pY = -($(this).index()) * sjObj.opt.height;
+                var pY = -($(this).index() - 2) * sjObj.opt.height;
                 //console.log(pY)
                 $(this).parent().css({
                   "transform": "translate(0," + pY + "px)"
@@ -413,12 +413,12 @@
             sjObj.opt.timeElm.find(".df-ul").each(function() {
               currentY = getTranslateY(this);
               var dataClass = $(this).attr("data-class");
-              var val = $($(this).find(".df-li")[Math.round(currentY / sjObj.opt.height) + 2]).attr("data-val");
+              var val = $($(this).find(".df-li")[Math.round(currentY / sjObj.opt.height) + 1]).attr("data-val");
               sjObj.opt.vardata(dataClass, val);
               console.log(dataClass, val)
               $(this).unbind("webkitTransitionEnd").on("webkitTransitionEnd", function() {
                 currentY = getTranslateY(this);
-                var val = $($(this).find(".df-li")[Math.round(currentY / sjObj.opt.height) + 2]).attr("data-val");
+                var val = $($(this).find(".df-li")[Math.round(currentY / sjObj.opt.height) + 1]).attr("data-val");
                 dataClass = $(this).attr("data-class");
                 sjObj.opt.vardata(dataClass, val);
                 sjObj.opt.daysJudge(dataClass);
