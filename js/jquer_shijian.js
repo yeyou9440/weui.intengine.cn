@@ -413,12 +413,12 @@
             sjObj.opt.timeElm.find(".df-ul").each(function() {
               currentY = getTranslateY(this);
               var dataClass = $(this).attr("data-class");
-              var val = $($(this).find(".df-li")[Math.round(currentY / sjObj.opt.height) + 1]).attr("data-val");
+              var val = $($(this).find(".df-li")[Math.round(currentY / sjObj.opt.height) + 2]).attr("data-val");
               sjObj.opt.vardata(dataClass, val);
               console.log(dataClass, val)
               $(this).unbind("webkitTransitionEnd").on("webkitTransitionEnd", function() {
                 currentY = getTranslateY(this);
-                var val = $($(this).find(".df-li")[Math.round(currentY / sjObj.opt.height) + 1]).attr("data-val");
+                var val = $($(this).find(".df-li")[Math.round(currentY / sjObj.opt.height) + 2]).attr("data-val");
                 dataClass = $(this).attr("data-class");
                 sjObj.opt.vardata(dataClass, val);
                 sjObj.opt.daysJudge(dataClass);
@@ -428,12 +428,12 @@
             sjObj.opt.timeElm.find(".df-ul").each(function() {
               currentY = getTranslateY(this);
               var dataClass = $(this).attr("data-class");
-              var val = $($(this).find(".df-li")[Math.round(currentY / sjObj.opt.height) + 1]).attr("data-val");
+              var val = $($(this).find(".df-li")[Math.round(currentY / sjObj.opt.height) + 2]).attr("data-val");
               sjObj.opt.vardata(dataClass, val);
               console.log(dataClass, val)
               $(this).unbind("webkitTransitionEnd").on("webkitTransitionEnd", function() {
                 currentY = getTranslateY(this);
-                var val = $($(this).find(".df-li")[Math.round(currentY / sjObj.opt.height) + 1]).attr("data-val");
+                var val = $($(this).find(".df-li")[Math.round(currentY / sjObj.opt.height) + 2]).attr("data-val");
                 dataClass = $(this).attr("data-class");
                 sjObj.opt.vardata(dataClass, val);
                 sjObj.opt.daysJudge(dataClass);
@@ -462,12 +462,12 @@
                 $(sjObj.opt.timeElm.find('[data-class="dd"]').find(".df-li")[l - 1 + i]).removeClass("df-show").addClass("df-hide")
               }
               //console.log("当前y",naomovey,"目标y",(day-1-2)*sjObj.opt.height)
-              if (naomovey > (day - 1 - 2) * sjObj.opt.height) {
+              if (naomovey > (day - 1) * sjObj.opt.height) {
                 sjObj.opt.timeElm.find('[data-class="dd"]').css({
                   "transition": "all .5s"
                 })
                 sjObj.opt.timeElm.find('[data-class="dd"]').css({
-                  "transform": "translate(0," + -(day - 1 - 2) * sjObj.opt.height + "px)"
+                  "transform": "translate(0," + -(day - 1) * sjObj.opt.height + "px)"
                 })
               }
             }
