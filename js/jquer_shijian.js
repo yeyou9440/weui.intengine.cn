@@ -311,7 +311,7 @@
 
             if (sjObj.opt.Day) sjObj.opt.timeElm.find("[data-class='dd'] .df-li").each(function() {
               if (parseInt($(this).attr("data-val")) == parseInt(sjObj.opt.dd)) {
-                var pY = -($(this).index() - 2) * sjObj.opt.height;
+                var pY = -($(this).index()) * sjObj.opt.height;
                 //console.log(pY)
                 $(this).parent().css({
                   "transform": "translate(0," + pY + "px)"
