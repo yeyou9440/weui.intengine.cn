@@ -462,12 +462,12 @@
                 $(sjObj.opt.timeElm.find('[data-class="dd"]').find(".df-li")[l - 1 + i]).removeClass("df-show").addClass("df-hide")
               }
               //console.log("当前y",naomovey,"目标y",(day-1-2)*sjObj.opt.height)
-              if (naomovey > (day - 1) * sjObj.opt.height) {
+              if (naomovey > (day - 1 - 2) * sjObj.opt.height) {
                 sjObj.opt.timeElm.find('[data-class="dd"]').css({
                   "transition": "all .5s"
                 })
                 sjObj.opt.timeElm.find('[data-class="dd"]').css({
-                  "transform": "translate(0," + -(day - 1) * sjObj.opt.height + "px)"
+                  "transform": "translate(0," + -(day - 1 - 2) * sjObj.opt.height + "px)"
                 })
               }
             }
