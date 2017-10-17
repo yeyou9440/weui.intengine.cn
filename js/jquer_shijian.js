@@ -2,12 +2,12 @@
   $.fn.shijian = function(options) {
     function cPlugin(o) {
       var sjObj = o;
-      //默认参数
+      //默认参数1
       sjObj.defaults = {
         type: "time",
         Format: "yyyymmdd", //显示时间格式//yyyy表示年份 ，mm月份 ，dd天数
         Order: 'yymmdd',
-        width: 60, //
+        width: 100, //
         height: 32,
         Year: true, //是否显示年//
         Month: true, //是否显示月//

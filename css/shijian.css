@@ -48,7 +48,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder { /* IE 10+ */  colo
 }
 
 .df-box {
-	min-width: 170px;
+	min-width:250px;
 	background: #fff;
 	border-radius: 10px;
 	font-size: 12px;
