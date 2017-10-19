@@ -57,8 +57,8 @@ body {
 					                <a class="increase"><img src="images/increase.png" width="20" height="20" /></a>
 			    </div>
 	    	</li>
-         
-          
+
+
             <li><img src="images/dishes.jpg"  />
 	    		<span class="name">番茄浓汤番茄浓汤
                </span>
@@ -79,7 +79,50 @@ body {
 					                <a class="increase"><img src="images/increase.png" width="20" height="20" /></a>
 			    </div>
 	    	</li>
-            
+
+				<li><img src="images/dishes.jpg"  />
+			<span class="name">番茄浓汤番茄浓汤
+					 </span>
+			 <em class="price">￥5.0</em>
+			<div class="d-stock ">
+						 <a class="decrease"><img src="images/decrease.png" width="20" height="20" /></a>
+											 <input id="num" readonly class="text_box" name="" type="text" value="1">
+											<a class="increase"><img src="images/increase.png" width="20" height="20" /></a>
+			</div>
+		</li>
+
+		<li><img src="images/dishes.jpg"  />
+	<span class="name">番茄浓汤番茄浓汤
+			 </span>
+	 <em class="price">￥5.0</em>
+	<div class="d-stock ">
+				 <a class="decrease"><img src="images/decrease.png" width="20" height="20" /></a>
+									 <input id="num" readonly class="text_box" name="" type="text" value="1">
+									<a class="increase"><img src="images/increase.png" width="20" height="20" /></a>
+	</div>
+</li>
+
+<li><img src="images/dishes.jpg"  />
+<span class="name">番茄浓汤番茄浓汤
+	 </span>
+<em class="price">￥5.0</em>
+<div class="d-stock ">
+		 <a class="decrease"><img src="images/decrease.png" width="20" height="20" /></a>
+							 <input id="num" readonly class="text_box" name="" type="text" value="1">
+							<a class="increase"><img src="images/increase.png" width="20" height="20" /></a>
+</div>
+</li>
+
+<li><img src="images/dishes.jpg"  />
+<span class="name">番茄浓汤番茄浓汤
+	 </span>
+<em class="price">￥5.0</em>
+<div class="d-stock ">
+		 <a class="decrease"><img src="images/decrease.png" width="20" height="20" /></a>
+							 <input id="num" readonly class="text_box" name="" type="text" value="1">
+							<a class="increase"><img src="images/increase.png" width="20" height="20" /></a>
+</div>
+</li>
 </ul>
 
 
@@ -121,7 +164,7 @@ body {
 					}
 					self.siblings('input').val(current_num);
 					update_item(self.siblings('input').data('item-id'));
-				})		
+				})
 				$('.decrease').click(function(){
 					var self = $(this);
 					var current_num = parseInt(self.siblings('input').val());
@@ -137,7 +180,7 @@ body {
 					}
 				})
 			})
-		//删除提示信息   
+		//删除提示信息
 		    $(function() {
 		  $('#doc-modal-list').find('.am-icon-close').add('#doc-confirm-toggle').
 		    on('click', function() {
@@ -155,7 +198,7 @@ body {
 		      });
 		    });
 		});
-		
+
 		</script>
 </body>
 </html>
