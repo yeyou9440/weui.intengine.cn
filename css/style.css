@@ -507,7 +507,7 @@ em ,i{ font-style: normal; margin:0; padding:0;}
 
 
 /*--all appointment---*/
-.all-appoitment{margin-top:50px;}
+.all-appoitment{margin-top:50px;margin-bottom:50px;}
 .appoitment_list{ margin-left:6px; margin-right:6px; margin-bottom:6px; border-radius:10px; background:#fff; }
 .appoitment_list_top{ border-bottom:#CCC 1px dashed; color:#999; font-size:14px; padding:12px;}
 .appoitment_list_top span{ float:right; font-size:14px; }
