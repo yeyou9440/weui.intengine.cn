@@ -265,9 +265,10 @@ ul.callbacks_tabs.callbacks1_tabs {
 .sq-head { position: fixed; top: 0; width: 100%; z-index: 100; background: #fff; border-bottom: 1px solid #ddd;}
 .sq-head .am-icon-trash{ color: #999;}
 .sq-head .am-header-left a { border: 1px solid #ddd; color: #999; padding: 0 8px; height: 35px; line-height: 35px; border-radius: 8px;}
-.content-list{border-top: 1px solid #ddd; margin-top: -1px;  width: 100%;}
+.content-list{border-top: 1px solid #ddd; margin-top: -1px;  width: 100%; }
+
 .list-content{ position: relative; overflow: hidden; }
-.list-left{ width: 23%; position: fixed;  height: 90%;  top: 43px;  overflow: auto; border-right: 1px solid #cfcfcf; background:#e7e7e7; }
+.list-left{ width: 23%; position: fixed;  height: 90%;  top: 43px;  overflow: scroll; border-right: 1px solid #cfcfcf; background:#e7e7e7; padding-bottom: 30px;}
 .list-left li {width: 100%;  font-size: 1.2rem;
     height: 4rem;line-height: 4rem;text-align: center; overflow: hidden;border-bottom: 1px solid #cfcfcf; }
 .list-left li a{ color: #666; text-decoration:none;}
